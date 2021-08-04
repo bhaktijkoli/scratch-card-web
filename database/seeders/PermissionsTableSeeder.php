@@ -219,6 +219,46 @@ class PermissionsTableSeeder extends Seeder
                 'table_name' => 'settings',
                 'updated_at' => '2021-08-04 00:08:41',
             ),
+            25 => 
+            array (
+                'created_at' => '2021-08-04 07:53:33',
+                'id' => 26,
+                'key' => 'browse_cards',
+                'table_name' => 'cards',
+                'updated_at' => '2021-08-04 07:53:33',
+            ),
+            26 => 
+            array (
+                'created_at' => '2021-08-04 07:53:33',
+                'id' => 27,
+                'key' => 'read_cards',
+                'table_name' => 'cards',
+                'updated_at' => '2021-08-04 07:53:33',
+            ),
+            27 => 
+            array (
+                'created_at' => '2021-08-04 07:53:33',
+                'id' => 28,
+                'key' => 'edit_cards',
+                'table_name' => 'cards',
+                'updated_at' => '2021-08-04 07:53:33',
+            ),
+            28 => 
+            array (
+                'created_at' => '2021-08-04 07:53:33',
+                'id' => 29,
+                'key' => 'add_cards',
+                'table_name' => 'cards',
+                'updated_at' => '2021-08-04 07:53:33',
+            ),
+            29 => 
+            array (
+                'created_at' => '2021-08-04 07:53:33',
+                'id' => 30,
+                'key' => 'delete_cards',
+                'table_name' => 'cards',
+                'updated_at' => '2021-08-04 07:53:33',
+            ),
         ));
         
         

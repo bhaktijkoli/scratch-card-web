@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/c/{link}', 'card')->name('card.view');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

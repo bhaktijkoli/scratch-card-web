@@ -73,6 +73,24 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'roles',
                 'updated_at' => '2021-08-04 00:08:41',
             ),
+            3 => 
+            array (
+                'controller' => NULL,
+                'created_at' => '2021-08-04 07:53:33',
+                'description' => NULL,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'display_name_plural' => 'Cards',
+                'display_name_singular' => 'Card',
+                'generate_permissions' => 1,
+                'icon' => 'voyager-credit-cards',
+                'id' => 4,
+                'model_name' => 'App\\Models\\Card',
+                'name' => 'cards',
+                'policy_name' => NULL,
+                'server_side' => 0,
+                'slug' => 'cards',
+                'updated_at' => '2021-08-04 07:56:48',
+            ),
         ));
         
         

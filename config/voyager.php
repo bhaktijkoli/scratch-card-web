@@ -167,7 +167,7 @@ return [
         'add_permission' => true,
 
         // which role add premissions to
-        'default_role' => 'admin',
+        'default_role' => 'developer',
     ],
 
     /*

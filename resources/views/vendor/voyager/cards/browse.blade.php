@@ -404,7 +404,6 @@
                     toastr.info('Linked copied.')
                 },
                 function () {
-                /* failure */
                 }
             );
         }

@@ -4,9 +4,9 @@ const scContainer = document.getElementById('card-container')
 const scContent = document.getElementById('card-contient')
 const sc = new ScratchCard('#card-container', {
     scratchType: SCRATCH_TYPE.LINE,
-    containerWidth: 300,
-    containerHeight: 300,
-    imageForwardSrc: '/images/card-overlay.svg',
+    containerWidth: 600,
+    containerHeight: 325,
+    imageForwardSrc: '/images/card-overlay.png',
     imageBackgroundSrc: '/images/card-background.svg',
     htmlBackground: '',
     clearZoneRadius: 50,

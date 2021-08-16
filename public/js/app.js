@@ -11,24 +11,62 @@ __webpack_require__(/*! scratchcard-js */ "./node_modules/scratchcard-js/build/s
 
 var scContainer = document.getElementById('card-container');
 var scContent = document.getElementById('card-contient');
-var sc = new ScratchCard('#card-container', {
-  scratchType: SCRATCH_TYPE.LINE,
-  containerWidth: 600,
-  containerHeight: 325,
-  imageForwardSrc: '/images/card-overlay.png',
-  imageBackgroundSrc: '/images/card-background.svg',
-  htmlBackground: '',
-  clearZoneRadius: 50,
-  percentToFinish: 30,
-  callback: function callback() {
-    scContent.style.display = 'flex';
-  }
-}); // Init
 
-sc.init().then(function () {})["catch"](function (error) {
-  // image not loaded
-  alert(error.message);
-});
+if (window.document.body.classList.contains('home')) {
+  // Multi Card
+  // Card List
+  var cards = ['card1.png', 'card2.png', 'card3.png', 'card4.png', 'card5.png', 'card6.png', 'final.png'];
+
+  var initScrachCard = function initScrachCard(index) {
+    var sc = new ScratchCard('#card-container', {
+      scratchType: SCRATCH_TYPE.LINE,
+      containerWidth: 600,
+      containerHeight: 325,
+      imageForwardSrc: "/images/".concat(cards[index]),
+      imageBackgroundSrc: '/images/card-background.svg',
+      htmlBackground: '',
+      clearZoneRadius: 50,
+      percentToFinish: 30,
+      callback: function callback() {
+        if (index < cards.length - 2) {
+          sc.canvas.remove();
+          initScrachCard(index + 1);
+        }
+      }
+    }); // Init
+
+    sc.init().then(function () {
+      sc.container.style.backgroundImage = "url(/images/".concat(cards[index + 1], ")");
+      sc.container.style.backgroundSize = '600px 325px';
+    })["catch"](function (error) {
+      // image not loaded
+      alert(error.message);
+    });
+    console.log(sc);
+  };
+
+  initScrachCard(0);
+} else {
+  // Single Card
+  var sc = new ScratchCard('#card-container', {
+    scratchType: SCRATCH_TYPE.LINE,
+    containerWidth: 600,
+    containerHeight: 325,
+    imageForwardSrc: '/images/card-overlay.png',
+    imageBackgroundSrc: '/images/card-background.svg',
+    htmlBackground: '',
+    clearZoneRadius: 50,
+    percentToFinish: 30,
+    callback: function callback() {
+      scContent.style.display = 'flex';
+    }
+  }); // Init
+
+  sc.init().then(function () {})["catch"](function (error) {
+    // image not loaded
+    alert(error.message);
+  });
+}
 
 /***/ }),
 
